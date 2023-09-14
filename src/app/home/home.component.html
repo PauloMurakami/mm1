@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>M/M/1</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-item>
+    <ion-label>
+      <ion-input [(ngModel)]="lambda" label="λ(pps)" type="number" placeholder="000"></ion-input>
+      <ion-input [(ngModel)]="micro" label="μ(pps)" type="number" placeholder="000"></ion-input>
+      <ion-item>
+        <ion-select placeholder="Selecione o padrão de tempo" expand="full" [(ngModel)]="tempo">
+          <ion-select-option value="ms">Milissegundos</ion-select-option>
+          <ion-select-option value="s">Segundos</ion-select-option>
+          <ion-select-option value="h">Horas</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-button color="success" size="default" expand="full" (click)="calcular()">Calcular</ion-button>
+      <ion-text color="success" [innerHtml]="textoCompleto"></ion-text>
+    </ion-label>
+
+  </ion-item>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>
+      PGM
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
